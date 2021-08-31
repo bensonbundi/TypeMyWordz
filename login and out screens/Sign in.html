@@ -19,7 +19,7 @@
             <form>
                 <div class="email">
                     <input class="form-control form-control-lg" type="text" placeholder="Email address"
-                        aria-label=".form-control-lg example" required>
+                        aria-label=".form-control-lg example" id="email" required>
                 </div>
                 <div class="password">
                     <input class="form-control form-control-lg" type="text" placeholder="Password"
@@ -33,7 +33,10 @@
             </div>
         </div>
     </div>
-
+<script>
+        let email = document.querySelector('#email');
+            email.focus();
+    </script>
 </body>
 
 </html>
