@@ -1,16 +1,17 @@
 var passport = require('passport');
-var LinkedInStrategy = require('passport-linkedin');
+var GitHubStrategy = require('passport-github2').Strategy;
 
 var User = require('../models/user');
 var config = require('../_config');
 var init = require('./init');
 
-passport.use(new LinkedInStrategy({
-    consumerKey: config.linkedin.clientID,
-    consumerSecret: config.linkedin.clientSecret,
-    callbackURL: config.linkedin.callbackURL
+
+passport.use(new GitHubStrategy({
+  clientID: config.github.clientID,
+  clientSecret: config.github.clientSecret,
+  callbackURL: "http://127.0.0.1:3000/auth/github/callback"
   },
-  function(token, tokenSecret, profile, done) {
+  function(accessToken, refreshToken, profile, done) {
 
     var searchQuery = {
       name: profile.displayName

@@ -1,15 +1,14 @@
 var passport = require('passport');
-var GitHubStrategy = require('passport-github2').Strategy;
+var TwitterStrategy = require('passport-twitter').Strategy;
 
 var User = require('../models/user');
 var config = require('../_config');
 var init = require('./init');
 
-
-passport.use(new GitHubStrategy({
-  clientID: config.github.clientID,
-  clientSecret: config.github.clientSecret,
-  callbackURL: config.github.callbackURL
+passport.use(new TwitterStrategy({
+    consumerKey: config.twitter.consumerKey,
+    consumerSecret: config.twitter.consumerSecret,
+    callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
   },
   function(accessToken, refreshToken, profile, done) {
 
