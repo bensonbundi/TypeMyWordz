@@ -1,10 +1,8 @@
-
 {
-  
   "name": "TypeMyWordz",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./server/bin/www"
+    "start": "node ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -16,16 +14,17 @@
   "bugs": {
     "url": "https://github.com/bensonbundi/TypeMyWordz/issues"
   },
-   "homepage": "https://github.com/bensonbundi/TypeMyWordz#readme",
+  "homepage": "https://github.com/bensonbundi/TypeMyWordz#readme",
   "dependencies": {
-    "body-parser": "~1.13.2",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "dotenv": "^10.0.0",
-    "express": "^4.13.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "express-session": "^1.17.2",
-    "mongoose": "^4.1.8",
-    "morgan": "~1.6.1",
+    "mongoose": "^4.13.21",
+    "morgan": "^1.10.0",
     "passport": "^0.3.0",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.9",
@@ -35,9 +34,9 @@
     "passport-instagram": "^1.0.0",
     "passport-linkedin": "^1.0.0",
     "passport-twitter": "^1.0.3",
-    "serve-favicon": "~2.3.0",
+    "serve-favicon": "^2.5.0",
     "swig": "^1.4.2"
-  }
+  },
   "devDependencies": {
     "nodemon": "^2.0.12"
   }
